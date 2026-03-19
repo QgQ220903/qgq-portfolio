@@ -117,7 +117,7 @@ export const Contact = () => {
           {/* Footer */}
           <div className="mt-16 pt-6 border-t border-gray-100 text-center">
             <p className="text-xs text-gray-400">
-              © 2026 Quach Gia Quy · Built with React & Tailwind CSS
+              © 2026 Quach Gia Quy · Designed & built by Quach Gia Quy
             </p>
           </div>
 

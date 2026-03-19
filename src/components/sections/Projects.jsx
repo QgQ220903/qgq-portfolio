@@ -127,5 +127,5 @@ export const Projects = () => {
         </div>
       </RevealOnScroll>
     </section>
-  );
+  );    
 };
