@@ -1,72 +1,76 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { FaFileDownload } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export const Home = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-16">
-      <RevealOnScroll>
-        <div className="text-center z-10 px-4">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative bg-white overflow-hidden"
+    >
+      {/* Subtle background accent */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(37,99,235,0.06),transparent)] pointer-events-none" />
 
-          <p className="text-xs font-medium tracking-widest uppercase text-gray-500 mb-4">
-            Power Platform Developer
-          </p>
+      <div className="relative z-10 w-full pt-16">
+        <RevealOnScroll>
+          <div className="text-center px-6 max-w-2xl mx-auto">
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent leading-tight">
-            Hi, I'm Quach Gia Quy
-          </h1>
+            <span className="inline-block text-xs font-medium tracking-widest uppercase text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full mb-6">
+              Power Platform Developer
+            </span>
 
-          <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto leading-relaxed">
-            I build <span className="text-white font-medium">Canvas Apps</span> and{" "}
-            <span className="text-white font-medium">automated workflows</span> that digitize
-            manual business processes — turning paper-based operations into intuitive digital
-            solutions on the Microsoft Power Platform.
-          </p>
+            <h1 className="text-4xl md:text-6xl font-semibold text-gray-900 mb-5 leading-tight tracking-tight">
+              Hi, I'm{" "}
+              <span className="text-blue-600">Quach Gia Quy</span>
+            </h1>
 
-          <div className="flex justify-center space-x-4">
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-500 text-white py-3 px-6 rounded font-medium hover:bg-blue-600 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex justify-center items-center gap-2 transition"
-            >
-              <FaFileDownload /> Resume
-            </a>
+            <p className="text-gray-500 text-base mb-8 leading-relaxed max-w-lg mx-auto">
+              I build <span className="text-gray-800 font-medium">Canvas Apps</span> and{" "}
+              <span className="text-gray-800 font-medium">automated workflows</span> that digitize
+              manual business processes — turning paper-based operations into intuitive digital
+              solutions on the Microsoft Power Platform.
+            </p>
 
-            <a
-              href="#contact"
-              className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium 
-              hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-500/10 flex items-center justify-center gap-2 transition"
-            >
-              <MdEmail /> Contact Me
-            </a>
+            <div className="flex justify-center gap-3 mb-8">
+              <a
+                href="/QuachGiaQuy_PowerPlatformDeveloper.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white py-2.5 px-5 rounded-lg text-sm font-medium hover:bg-blue-700 flex items-center gap-2 transition-colors shadow-sm shadow-blue-200"
+              >
+                <FaFileDownload /> Resume
+              </a>
+              <a
+                href="#contact"
+                className="border border-gray-200 text-gray-600 py-2.5 px-5 rounded-lg text-sm font-medium hover:border-blue-400 hover:text-blue-600 flex items-center gap-2 transition-colors"
+              >
+                <MdEmail /> Contact Me
+              </a>
+            </div>
+
+            <div className="flex justify-center gap-3">
+              <a
+                href="https://github.com/QgQ220903"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl border border-gray-200 text-gray-400 p-2.5 rounded-lg hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                <FaGithubSquare />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/quy-qu%C3%A1ch-337138217/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl border border-gray-200 text-gray-400 p-2.5 rounded-lg hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+
           </div>
-
-          <div className="flex justify-center space-x-4 py-8">
-            <a
-              href="https://github.com/QgQ220903"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl border border-blue-500/50 text-blue-500 py-2 px-3 rounded font-medium 
-              hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-500/10 transition"
-            >
-              <FaGithubSquare />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/quy-qu%C3%A1ch-337138217/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl border border-blue-500/50 text-blue-500 py-2 px-3 rounded font-medium 
-              hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:bg-blue-500/10 transition"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
-
-        </div>
-      </RevealOnScroll>
+        </RevealOnScroll>
+      </div>
     </section>
   );
 };
